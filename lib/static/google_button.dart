@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_typing_uninitialized_variables, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:watch_em_grow/values/colors.dart';
@@ -10,7 +10,7 @@ class GoogleButton extends StatelessWidget {
       @required this.onPressed,
       this.text,
       this.textcolor,
-      this.icon,
+      this.icon='assets/images/google.png',
       this.sreenRatio = 0.9,
       this.buttonwidth = 0.37,
       this.color = primaryTextColor})
@@ -27,17 +27,14 @@ class GoogleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * buttonwidth,
+      width: MediaQuery.of(context).size.width,
       height: 50,
       child: ElevatedButton(
         onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
+       style: ElevatedButton.styleFrom(
+          // ignore: deprecated_member_use
           primary: color,
           onPrimary: primaryTextColor,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(15), topLeft: Radius.circular(15)),
-          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
