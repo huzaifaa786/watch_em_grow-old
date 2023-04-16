@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:watch_em_grow/screen/product/top_product.dart';
+import 'package:watch_em_grow/screen/store/store_product.dart';
 import 'package:watch_em_grow/static/banner_card.dart';
 import 'package:watch_em_grow/static/category_card.dart';
 import 'package:watch_em_grow/static/rating_card.dart';
@@ -15,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               SearchInput(
                 text: 'search',
@@ -23,9 +25,17 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              RatingCard(),
+              RatingCard(
+                 onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StoreProductScreen()),
+                        );
+                      },
+              ),
               SizedBox(
-                height: 10,
+                height: 15,
               ),
               BannerCard(),
               SizedBox(
@@ -38,10 +48,24 @@ class HomeScreen extends StatelessWidget {
                       Column(
                         children: [
                           CategoryCard(
+                             onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StoreProductScreen()),
+                        );
+                      },
                             title: 'outware',
                             // image: 'assets/images/outware.jpg',
                           ),
                           CategoryCard(
+                             onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StoreProductScreen()),
+                        );
+                      },
                             title: 'Shoes',
                             image: 'assets/images/shoes.jpg',
                           )
@@ -52,6 +76,13 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     children: [
                       CategoryCard(
+                         onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StoreProductScreen()),
+                        );
+                      },
                         title: 'Tops',
                         image: 'assets/images/top.jpg',
                         height:300.0,
@@ -63,6 +94,13 @@ class HomeScreen extends StatelessWidget {
               Row(children: [
                 Row(children: [
                     CategoryCard(
+                       onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StoreProductScreen()),
+                        );
+                      },
                         title: 'bottom',
                         // image: 'assets/images/bottom.jpg',
                         height:150.0,
@@ -70,11 +108,19 @@ class HomeScreen extends StatelessWidget {
                 ],),
                 Row(children: [
                     CategoryCard(
+                       onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StoreProductScreen()),
+                        );
+                      },
                         title: 'Tops',
                         height:150.0,
                       )
                 ],)
               ],)
+          
             ],
           ),
         ),

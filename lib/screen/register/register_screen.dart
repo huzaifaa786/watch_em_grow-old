@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch_em_grow/screen/profile/profile_screen.dart';
 import 'package:watch_em_grow/static/checkbox.dart';
 import 'package:watch_em_grow/static/input_field.dart';
 import 'package:watch_em_grow/static/input_field_pass.dart';
@@ -52,7 +53,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                   TopBar(),
+                  //  TopBar(),
                     SizedBox(
                       height: 15,
                     ),
@@ -138,10 +139,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: LargeButton(
                       title: 'Create Account',
                       sreenRatio: 0.9,
-                      onPressed: () {},
                       color: themeColor,
                       textcolor: white,
                       buttonWidth: 0.95,
+                       onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProfileScreen()),
+                        );
+                      },
                     )),
                     // Center(
                     //   child: Row(

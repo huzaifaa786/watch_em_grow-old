@@ -25,27 +25,30 @@ class CategoryCard extends StatelessWidget {
   // final textcolor;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width:MediaQuery.of(context).size.width*0.5,
-      
-   child : Column(children: [
-    Padding(
-      padding: const EdgeInsets.all(8.0),
+    return GestureDetector(
+       onTap: onPressed,
       child: Container(
-        width:MediaQuery.of(context).size.width* 0.5,
-        height: height,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-        color: Colors.amber,
-       image: DecorationImage(
-      image: AssetImage(image),
-      fit: BoxFit.fill,
-    ),
-        ),
+        width:MediaQuery.of(context).size.width*0.5,
         
+       child : Column(children: [
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          width:MediaQuery.of(context).size.width* 0.5,
+          height: height,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+          color: Colors.amber,
+         image: DecorationImage(
+        image: AssetImage(image),
+        fit: BoxFit.fill,
       ),
-    ),
-    Text(title),
-   ],)
+          ),
+          
+        ),
+      ),
+      Text(title),
+       ],)
+      ),
     );
   }
 }

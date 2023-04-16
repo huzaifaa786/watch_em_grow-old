@@ -26,15 +26,18 @@ class GoogleButton extends StatelessWidget {
   final buttonwidth;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: MediaQuery.of(context).size.width,
       height: 50,
+                    
+      decoration: BoxDecoration(border:Border.all(color: textGrey) ),
       child: ElevatedButton(
         onPressed: onPressed,
        style: ElevatedButton.styleFrom(
           // ignore: deprecated_member_use
           primary: color,
           onPrimary: primaryTextColor,
+          
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +49,7 @@ class GoogleButton extends StatelessWidget {
                 height:28,
                 width: 28,
                 decoration: BoxDecoration(
-                    // border: Border.all(color: secondaryD_color),
+                    // border: Border.all(color:textGrey),
                     borderRadius: BorderRadius.circular(20)),
                child: Column(children: [
                  Image.asset(icon)

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:watch_em_grow/screen/home/home_screen.dart';
 import 'package:watch_em_grow/static/input_field.dart';
 import 'package:watch_em_grow/static/input_field_pass.dart';
 import 'package:watch_em_grow/static/input_field_phone.dart';
@@ -133,10 +134,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           child: LargeButton(
                         title: 'Update Profile',
                         sreenRatio: 0.9,
-                        onPressed: () {},
                         color: themeColor,
                         textcolor: white,
                         buttonWidth: 0.95,
+                         onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()),
+                        );
+                      },
                       )),
                     
                     ],

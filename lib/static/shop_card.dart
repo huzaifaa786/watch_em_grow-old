@@ -61,6 +61,7 @@ class ShopeCard extends StatelessWidget {
                       ],
                     ),
                   ),
+                
                 ],
               ),
               Row(

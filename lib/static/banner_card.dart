@@ -35,7 +35,7 @@ class BannerCard extends StatelessWidget {
                 decoration: const BoxDecoration(),
                 height:80,
                 width: MediaQuery.of(context).size.width* 0.9,
-                child: Image.asset("assets/images/product2.jpg", fit: BoxFit.fill,)),
+                child: Image.asset("assets/images/child.jpg", fit: BoxFit.cover,)),
               Positioned(
                   child: Row(
                 children: [

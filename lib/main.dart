@@ -4,6 +4,7 @@ import 'package:watch_em_grow/screen/product/top_product.dart';
 import 'package:watch_em_grow/screen/profile/profile_screen.dart';
 import 'package:watch_em_grow/screen/register/register_screen.dart';
 import 'package:watch_em_grow/screen/register/sign_customer.dart';
+import 'package:watch_em_grow/screen/store/store_product.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,13 +21,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      initialRoute: 'home',
+      initialRoute: 'customer',
       routes: {
           'register': (context) => const RegisterScreen(),
           'profile': (context) => const ProfileScreen(),
           'home': (context) => const HomeScreen(),
           'topProduct': (context) => const TopProductScreen(),
           'customer': (context) => const CustomerRegisterScreen(),
+          'storeproduct': (context) => const StoreProductScreen(),
           
           }
     );

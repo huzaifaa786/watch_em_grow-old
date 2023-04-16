@@ -8,38 +8,35 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration( border: Border(
+              bottom: BorderSide(width: 1.5, color: Colors.grey),
+            ),),
       margin: const EdgeInsets.only(
         top: 12,
       ),
       child: Row(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // SvgPicture.asset('assets/images/notif.svg',color: themeController.isDarkTheme.value?white:primaryColor,),
-                IconButton(
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: primaryColor,
-                  ),
-                  onPressed: () {
-                    // do something
-                  },
-                )
-              ],
-            ),
-          ),
-       
-          Container(
-              // padding: const EdgeInsets.fromLTRB(10, 12, 10, 12),
-              // decoration: const BoxDecoration(
-              //     color: secondaryColor,
-              //     borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomRight: Radius.circular(10))),
-              // child: SvgPicture.asset('assets/images/horizontallogo.svg'),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: primaryColor,
+                ),
+                onPressed: () {
+                  // do something
+                },
               ),
-          
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0, top: 13.0),
+                child: Text(
+                  "Nahis fabric",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+              )
+            ],
+          ),
         ],
       ),
     );
