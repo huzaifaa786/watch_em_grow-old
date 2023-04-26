@@ -3,8 +3,9 @@ import 'package:watch_em_grow/values/colors.dart';
 
 class TopBar extends StatelessWidget {
   // ignore: prefer_const_constructors_in_immutables
-  TopBar({Key? key}) : super(key: key);
-
+  TopBar({Key? key,this.title="Nigida Febric and Clothes Collection",this.onPressed}) : super(key: key);
+   final title;
+   final onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,14 +25,12 @@ class TopBar extends StatelessWidget {
                   Icons.arrow_back,
                   color: primaryColor,
                 ),
-                onPressed: () {
-                  // do something
-                },
+                onPressed: onPressed,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0, top: 13.0),
                 child: Text(
-                  "Nahis fabric",
+                  title,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
               )

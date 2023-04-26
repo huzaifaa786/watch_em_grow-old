@@ -67,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                         );
                       },
                             title: 'Shoes',
-                            image: 'assets/images/shoes.jpg',
+                            // image: 'assets/images/shoes.jpg',
                           )
                         ],
                       )

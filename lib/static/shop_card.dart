@@ -28,95 +28,98 @@ class ShopeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: hintText),
-                      shape: BoxShape.circle,
+      child: GestureDetector(
+        onTap: onPressed,
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: hintText),
+                        shape: BoxShape.circle,
+                      ),
+                      height: 50,
+                      width: 50,
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/product.jpg"),
+                      ),
                     ),
-                    height: 50,
-                    width: 50,
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage("assets/images/user1.png"),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Shop Name',
+                            style: TextStyle(fontSize: 15, color: primaryColor),
+                          ),
+                          Text(
+                            '4 follower',
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: Column(
-                      children: [
-                        Text(
-                          'Shop Name',
-                          style: TextStyle(fontSize: 15, color: primaryColor),
-                        ),
-                        Text(
-                          '4 follower',
-                          style: TextStyle(fontSize: 15, color: primaryColor),
-                        ),
-                      ],
+                  
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'View Shop',
+                      style: TextStyle(color: Colors.blue[400], fontSize: 18.0),
+                    )
+                  ],
+                )
+              ],
+            ),
+            SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: height,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.amber,
+                    image: DecorationImage(
+                      image: AssetImage(image),
+                      fit: BoxFit.fill,
                     ),
-                  ),
-                
-                ],
-              ),
-              Row(
-                children: [
-                  Text(
-                    'view shop',
-                    style: TextStyle(color: Colors.blue, fontSize: 15),
-                  )
-                ],
-              )
-            ],
-          ),
-          SizedBox(height: 10,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width * 0.3,
-                height: height,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.amber,
-                  image: DecorationImage(
-                    image: AssetImage(image),
-                    fit: BoxFit.fill,
                   ),
                 ),
-              ),
-               Container(
-                width: MediaQuery.of(context).size.width * 0.3,
-                height: height,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.amber,
-                  image: DecorationImage(
-                    image: AssetImage(image),
-                    fit: BoxFit.fill,
+                 Container(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: height,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.amber,
+                    image: DecorationImage(
+                      image: AssetImage(image),
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
-              ),
-               Container(
-                width: MediaQuery.of(context).size.width * 0.3,
-                height: height,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.amber,
-                  image: DecorationImage(
-                    image: AssetImage(image),
-                    fit: BoxFit.fill,
+                 Container(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: height,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.amber,
+                    image: DecorationImage(
+                      image: AssetImage(image),
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          )
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

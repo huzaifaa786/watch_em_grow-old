@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:watch_em_grow/screen/order/order_screen.dart';
 import 'package:watch_em_grow/screen/product/top_product.dart';
 import 'package:watch_em_grow/static/product_card.dart';
 import 'package:watch_em_grow/static/shop_card.dart';
@@ -149,7 +150,7 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TopProductScreen()),
+                              builder: (context) => const OrderScreen()),
                         );
                       },
                 )
