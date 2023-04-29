@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      initialRoute: 'customer',
+      initialRoute: 'orderDetail',
       routes: {
           'register': (context) => const RegisterScreen(),
           'profile': (context) => const ProfileScreen(),
