@@ -58,7 +58,7 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: 80,
+                      width: 50,
                       height: 40,
                       decoration: BoxDecoration(
                           border: Border.all(color: textGrey),
@@ -66,15 +66,23 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                       child: Center(child: Text('XXL')),
                     ),
                     Container(
-                      width: 80,
+                      width: 50,
                       height: 40,
                       decoration: BoxDecoration(
                           border: Border.all(color: textGrey),
                           borderRadius: BorderRadius.circular(20)),
                       child: Center(child: Text('XL')),
                     ),
+                     Container(
+                      width: 50,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: textGrey),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(child: Text('L')),
+                    ),
                     Container(
-                      width: 80,
+                      width: 50,
                       height: 40,
                       decoration: BoxDecoration(
                           border: Border.all(color: textGrey),
@@ -82,12 +90,20 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                       child: Center(child: Text('M')),
                     ),
                     Container(
-                      width: 80,
+                      width: 50,
                       height: 40,
                       decoration: BoxDecoration(
                           border: Border.all(color: textGrey),
                           borderRadius: BorderRadius.circular(20)),
                       child: Center(child: Text('S')),
+                    ),
+                     Container(
+                      width: 50,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: textGrey),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(child: Text('XS')),
                     ),
                   ],
                 )
@@ -95,6 +111,7 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
               ],
             ),
           ),
+      
         ),
         Row(
           children: [
