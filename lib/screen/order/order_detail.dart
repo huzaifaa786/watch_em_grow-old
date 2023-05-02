@@ -11,7 +11,7 @@ class OrderDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: textGrey,
+      // backgroundColor: textGrey,
       body: SafeArea(
           child: SingleChildScrollView(
         child: Column(
@@ -51,7 +51,16 @@ class OrderDetailScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold)),
                     ],
                   ),
-                  Text('50.00')
+                  Row(
+                    children: [
+                       Icon(
+                      Icons.currency_pound_outlined,
+                      size: 15,
+                      color: textGrey,
+                    ),
+                      Text('50.00'),
+                    ],
+                  )
                 ],
               ),
             ),
@@ -82,9 +91,9 @@ class OrderDetailScreen extends StatelessWidget {
                     ],
                   ),
                   Icon(
-                    Icons.check_circle_outline_rounded,
+                    Icons.check_circle,
                     color: Colors.green,
-                    size: 25.0,
+                    size: 30.0,
                   )
                 ],
               ),
@@ -98,7 +107,7 @@ class OrderDetailScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Icon(
-                    Icons.check_circle_outline_rounded,
+                    Icons.check_circle,
                     color: Colors.green,
                     size: 25.0,
                   ),
@@ -107,7 +116,7 @@ class OrderDetailScreen extends StatelessWidget {
                   ),
                   Text(
                     'Order Placed',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   )
                 ],
               ),
@@ -120,7 +129,7 @@ class OrderDetailScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Icon(
-                    Icons.check_circle_outline_rounded,
+                    Icons.check_circle,
                     color: Colors.grey,
                     size: 25.0,
                   ),
@@ -129,7 +138,7 @@ class OrderDetailScreen extends StatelessWidget {
                   ),
                   Text(
                     'Order Recieved',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   )
                 ],
               ),
@@ -142,7 +151,7 @@ class OrderDetailScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Icon(
-                    Icons.check_circle_outline_rounded,
+                    Icons.check_circle,
                     color: Colors.grey,
                     size: 25.0,
                   ),
@@ -155,11 +164,11 @@ class OrderDetailScreen extends StatelessWidget {
                       Text(
                         'Rent Period Finish',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                            fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                       Text(
                         'Due 12/7/2023',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 18),
                       ),
                     ],
                   )
@@ -174,7 +183,7 @@ class OrderDetailScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Icon(
-                    Icons.check_circle_outline_rounded,
+                    Icons.check_circle,
                     color: Colors.grey,
                     size: 25.0,
                   ),
@@ -183,7 +192,7 @@ class OrderDetailScreen extends StatelessWidget {
                   ),
                   Text(
                     'Order Return',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   )
                 ],
               ),

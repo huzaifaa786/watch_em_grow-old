@@ -10,7 +10,7 @@ class TopBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration( border: Border(
-              bottom: BorderSide(width: 1.5, color: Colors.grey),
+              bottom: BorderSide(width: 1, color: themeColor),
             ),),
       margin: const EdgeInsets.only(
         top: 12,

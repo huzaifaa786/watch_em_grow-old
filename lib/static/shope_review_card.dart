@@ -24,14 +24,15 @@ class ShopReviewCard extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
+                           height: 55,
+                      width: 55,
                       decoration: BoxDecoration(
+                        image: DecorationImage(
+                        image: ExactAssetImage('assets/images/child.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                         border: Border.all(color: hintText),
                        borderRadius: BorderRadius.circular(10)
-                      ),
-                      height: 55,
-                      width: 55,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/user1.png"),
                       ),
                     ),
                     Padding(

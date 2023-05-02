@@ -209,14 +209,41 @@ class ProductDetailScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
             Row(
-             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-             children: [
-             Icon(Icons.remove_circle_outline_sharp,size:35,color: textGrey,),
-             SizedBox(
-              width:30,
-              child: Center(child: Text('2',style: TextStyle(fontSize: 20),))),
-             Icon(Icons.add_circle_outline_sharp,size: 35,color: themeColor,)
-            ],),
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                          color: textGrey,
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Icon(
+                        Icons.remove,
+                        size: 15,
+                        color: white,
+                      )),
+                  SizedBox(
+                      width: 30,
+                      child: Center(
+                          child: Text(
+                        '2',
+                        style: TextStyle(fontSize: 20),
+                      ))),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                        color: themeColor,
+                        borderRadius: BorderRadius.circular(50)),
+                    child: Icon(
+                      Icons.add,
+                      size: 15,
+                      color: white,
+                    ),
+                  )
+                ],
+              ),
+           
            Container(
             width:MediaQuery.of(context).size.width*0.7,
             height:50,

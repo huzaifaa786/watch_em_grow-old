@@ -37,8 +37,8 @@ class LargeButton extends StatelessWidget {
           shadowColor: themeColor,
           // ignore: deprecated_member_use
           onPrimary: themeColor,
-          shape: const RoundedRectangleBorder(
-            
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
           ),
         ),
         child: Row(
