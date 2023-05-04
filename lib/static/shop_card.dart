@@ -51,6 +51,7 @@ class ShopeCard extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 15.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Shop Name',
@@ -70,7 +71,7 @@ class ShopeCard extends StatelessWidget {
                   children: [
                     Text(
                       'View Shop',
-                      style: TextStyle(color: Colors.blue[400], fontSize: 18.0),
+                      style: TextStyle(color:themeColor[300], fontSize: 18.0,fontFamily:'Opensans' ),
                     )
                   ],
                 )

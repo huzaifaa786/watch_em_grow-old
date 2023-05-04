@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:watch_em_grow/screen/order/order_screen.dart';
 import 'package:watch_em_grow/screen/store/store_product.dart';
 import 'package:watch_em_grow/static/shop_card.dart';
 import 'package:watch_em_grow/values/colors.dart';
@@ -10,20 +9,19 @@ class TopProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: textGrey,
+      backgroundColor: Colors.white,
         body: SafeArea(
-          
             child: SingleChildScrollView(
               child: Column(
                   children: [
                     Container(
               width: MediaQuery.of(context).size.width,
-              height: 60,
+              height: 80,
               decoration: BoxDecoration(color: themeColor),
               child: Center(
                   child: Text(
                 'Tops',
-                style: TextStyle(color: white, fontSize: 20),
+                style: TextStyle(color: white, fontSize: 35,fontWeight: FontWeight.bold),
               ))),
                     SizedBox(
                       height: 20,
@@ -33,7 +31,7 @@ class TopProductScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const OrderScreen()),
+                              builder: (context) => const StoreProductScreen()),
                         );
                       },
                     ),
@@ -43,7 +41,7 @@ class TopProductScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const OrderScreen()),
+                              builder: (context) => const StoreProductScreen()),
                         );}
                     ),
                     SizedBox(height:10,),
@@ -52,7 +50,7 @@ class TopProductScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const OrderScreen()),
+                              builder: (context) => const StoreProductScreen()),
                         );}
                     ),
                     SizedBox(height:10,),
@@ -61,7 +59,7 @@ class TopProductScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const OrderScreen()),
+                              builder: (context) => const StoreProductScreen()),
                         );}
                     ),
                   ],

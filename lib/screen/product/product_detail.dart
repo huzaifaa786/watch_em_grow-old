@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch_em_grow/screen/cart/cart_screen.dart';
 import 'package:watch_em_grow/static/iconic_button.dart';
 import 'package:watch_em_grow/static/product_review.dart';
 import 'package:watch_em_grow/static/shope_review_card.dart';
@@ -244,22 +245,31 @@ class ProductDetailScreen extends StatelessWidget {
                 ],
               ),
            
-           Container(
-            width:MediaQuery.of(context).size.width*0.7,
-            height:50,
-            decoration: BoxDecoration(color: themeColor,
-            borderRadius: BorderRadius.circular(10)),
-            child: Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left:15.0),
-                child: Icon(Icons.card_travel_sharp,color: white,),
-              ),
-              
-              Padding(
-                padding: const EdgeInsets.only(left:45.0),
-                child: Text("Add To Cart",style: TextStyle(color: white,fontSize:18,),),
-              )
-            ]),
+           GestureDetector(
+            onTap: (){
+              Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CartScreen()),
+                        );
+            },
+             child: Container(
+              width:MediaQuery.of(context).size.width*0.7,
+              height:50,
+              decoration: BoxDecoration(color: themeColor,
+              borderRadius: BorderRadius.circular(10)),
+              child: Row(children: [
+                Padding(
+                  padding: const EdgeInsets.only(left:15.0),
+                  child: Icon(Icons.card_travel_sharp,color: white,),
+                ),
+                
+                Padding(
+                  padding: const EdgeInsets.only(left:45.0),
+                  child: Text("Add To Cart",style: TextStyle(color: white,fontSize:18,),),
+                )
+              ]),
+             ),
            )
           ],),
           SizedBox(height: 30,),

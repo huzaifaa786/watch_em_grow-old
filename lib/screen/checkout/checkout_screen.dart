@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch_em_grow/screen/success/success_screen.dart';
 import 'package:watch_em_grow/static/address_card.dart';
 import 'package:watch_em_grow/static/large_button.dart';
 import 'package:watch_em_grow/static/payment_method_card.dart';
@@ -79,7 +80,13 @@ class CheckoutScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 20,),
-                      LargeButton(title: 'Continue', onPressed: (){})
+                      LargeButton(title: 'Continue', onPressed: (){
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SuccessScreen()),
+                        );
+                      })
                     ],
                   ),
                 )),

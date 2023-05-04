@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:watch_em_grow/screen/order/order_screen.dart';
+import 'package:watch_em_grow/screen/order/current_screen.dart';
+import 'package:watch_em_grow/screen/product/product_detail.dart';
 import 'package:watch_em_grow/screen/product/top_product.dart';
 import 'package:watch_em_grow/static/product_card.dart';
-import 'package:watch_em_grow/static/shop_card.dart';
 import 'package:watch_em_grow/static/shope_review_card.dart';
 import 'package:watch_em_grow/static/toggle_button.dart';
 import 'package:watch_em_grow/static/top_bar.dart';
@@ -127,7 +127,7 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TopProductScreen()),
+                              builder: (context) => const ProductDetailScreen()),
                         );
                       },
                 )
@@ -145,7 +145,7 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TopProductScreen()),
+                              builder: (context) => const ProductDetailScreen()),
                         );
                       },
                 )
@@ -167,7 +167,7 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const OrderScreen()),
+                              builder: (context) => const CurrentOrderScreen()),
                         );
                       },
                 )
@@ -185,7 +185,7 @@ class _StoreProductScreenState extends State<StoreProductScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TopProductScreen()),
+                              builder: (context) => const ProductDetailScreen()),
                         );
                       },
                 )

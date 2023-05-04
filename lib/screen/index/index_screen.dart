@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:watch_em_grow/screen/product/top_product.dart';
 import 'package:watch_em_grow/static/toggle_button2.dart';
+import 'package:watch_em_grow/static/toggle_button_three.dart';
 import 'package:watch_em_grow/static/top_bar.dart';
 
 class IndexChatScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class IndexChatScreen extends StatelessWidget {
                         );}
             
             ),
-            SwitchToggleSecond(onPressed: (){},),
+            SwitchToggleThree(onPressed: (){},),
             Padding(
               padding: const EdgeInsets.only(left:15.0,top:15),
               child: Row(children: [

@@ -3,22 +3,28 @@
 import 'package:flutter/material.dart';
 import 'package:watch_em_grow/values/colors.dart';
 
-class SwitchToggle extends StatefulWidget {
-  const SwitchToggle(
+class SwitchToggleThree extends StatefulWidget {
+  const SwitchToggleThree(
       {Key? key,
       @required this.onPressed,
+      this.first='Chats',
+      this.second='Notificatons',
      })
       : super(key: key);
 
   final onPressed;
- 
+ final first;
+ final second;
 
   @override
-  State<SwitchToggle> createState() => _SwitchToggleState();
+  State<SwitchToggleThree> createState() => _SwitchToggleThreeState();
 }
 
-class _SwitchToggleState extends State<SwitchToggle> {
-  List<bool> _isSelected = [true,false,false];
+class _SwitchToggleThreeState extends State<SwitchToggleThree> {
+  List<bool> _isSelected = [false,false];
+  
+  String get first => 'Chats';
+  String get second => 'Notificatons';
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +38,7 @@ class _SwitchToggleState extends State<SwitchToggle> {
               child: ToggleButtons(
             children: <Widget>[
               Container(
-                width: MediaQuery.of(context).size.width * 0.33,
+                width: MediaQuery.of(context).size.width * 0.5,
                 decoration: BoxDecoration(
                   border: _isSelected[0]
                       ? Border(
@@ -50,7 +56,7 @@ class _SwitchToggleState extends State<SwitchToggle> {
                 ),
                 child: Center(
                   child: Text(
-                    'About',
+                    first,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -58,7 +64,7 @@ class _SwitchToggleState extends State<SwitchToggle> {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width * 0.33,
+                width: MediaQuery.of(context).size.width * 0.5,
                 decoration: BoxDecoration(
                   border: _isSelected[1]
                       ? Border(
@@ -76,39 +82,14 @@ class _SwitchToggleState extends State<SwitchToggle> {
                 ),
                 child: Center(
                   child: Text(
-                    'Items',
+                    second,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.33,
-                decoration: BoxDecoration(
-                  border: _isSelected[2]
-                      ? Border(
-                          bottom: BorderSide(
-                            width: 3,
-                            color: themeColor,
-                          ),
-                        )
-                      : Border(
-                          bottom: BorderSide(
-                            width: 1.5,
-                            color: Colors.grey,
-                          ),
-                        ),
-                ),
-                child: Center(
-                  child: Text(
-                    'Reviews',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
+              
             ],
             isSelected: _isSelected,
             onPressed: (int index) {

@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:watch_em_grow/screen/product/top_product.dart';
 import 'package:watch_em_grow/static/order_card.dart';
-import 'package:watch_em_grow/static/toggle_button2.dart';
 import 'package:watch_em_grow/static/top_bar.dart';
-import 'package:watch_em_grow/values/colors.dart';
 
-class OrderScreen extends StatelessWidget {
-  const OrderScreen({super.key});
+class OrderHistoryScreen extends StatelessWidget {
+  const OrderHistoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: textGrey,
+      // backgroundColor: textGrey,
       body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -25,9 +23,9 @@ class OrderScreen extends StatelessWidget {
                         );}
             
             ),
-            SwitchToggleSecond(),
-            SizedBox(height: 20.0,),
-            OrderCard(),
+            // SwitchToggleSecond(),
+            // SizedBox(height: 20.0,),
+            // OrderCard(),
             SizedBox(height:20.0,),
             OrderCard(),
             SizedBox(height:20.0,),

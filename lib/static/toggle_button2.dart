@@ -7,8 +7,8 @@ class SwitchToggleSecond extends StatefulWidget {
   const SwitchToggleSecond(
       {Key? key,
       @required this.onPressed,
-      this.first='Chats',
-      this.second='Notificatons',
+      this.first='Current',
+      this.second='History',
      })
       : super(key: key);
 
@@ -21,10 +21,10 @@ class SwitchToggleSecond extends StatefulWidget {
 }
 
 class _SwitchToggleSecondState extends State<SwitchToggleSecond> {
-  List<bool> _isSelected = [false,false];
+  List<bool> _isSelected = [true,false];
   
-  String get first => 'Chats';
-  String get second => 'Notificatons';
+  String get first => 'Current';
+  String get second => 'History';
 
   @override
   Widget build(BuildContext context) {

@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:watch_em_grow/screen/product/top_product.dart';
 import 'package:watch_em_grow/screen/store/store_product.dart';
 import 'package:watch_em_grow/static/banner_card.dart';
+import 'package:watch_em_grow/static/bottom_bar.dart';
 import 'package:watch_em_grow/static/category_card.dart';
 import 'package:watch_em_grow/static/rating_card.dart';
 import 'package:watch_em_grow/static/search_input.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  // void initState() {
+  //  const BottomBar();
+  //   super.initState();
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

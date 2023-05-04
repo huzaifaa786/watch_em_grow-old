@@ -5,8 +5,9 @@ import 'package:watch_em_grow/screen/home/home_screen.dart';
 import 'package:watch_em_grow/screen/index/chat_screen.dart';
 import 'package:watch_em_grow/screen/index/index_screen.dart';
 import 'package:watch_em_grow/screen/index/notification_screen.dart';
+import 'package:watch_em_grow/screen/order/history_screen.dart';
 import 'package:watch_em_grow/screen/order/order_detail.dart';
-import 'package:watch_em_grow/screen/order/order_screen.dart';
+import 'package:watch_em_grow/screen/order/current_screen.dart';
 import 'package:watch_em_grow/screen/product/product_detail.dart';
 import 'package:watch_em_grow/screen/product/top_product.dart';
 import 'package:watch_em_grow/screen/profile/profile_screen.dart';
@@ -14,6 +15,7 @@ import 'package:watch_em_grow/screen/register/register_screen.dart';
 import 'package:watch_em_grow/screen/register/sign_customer.dart';
 import 'package:watch_em_grow/screen/store/store_product.dart';
 import 'package:watch_em_grow/screen/success/success_screen.dart';
+import 'package:watch_em_grow/static/bottom_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,16 +32,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      initialRoute: 'success',
+      initialRoute: 'customer',
       routes: {
           'register': (context) => const RegisterScreen(),
+          'bottombar': (context) => const BottomBar(),
           'profile': (context) => const ProfileScreen(),
           'home': (context) => const HomeScreen(),
           'topProduct': (context) => const TopProductScreen(),
           'productDetail': (context) => const ProductDetailScreen(),
           'customer': (context) => const CustomerRegisterScreen(),
           'storeproduct': (context) => const StoreProductScreen(),
-          'order': (context) => const OrderScreen(),
+          'currentOrder': (context) => const CurrentOrderScreen(),
+          'orderHistory': (context) => const OrderHistoryScreen(),
           'orderDetail': (context) => const OrderDetailScreen(),
           'indexScreen': (context) => const IndexChatScreen(),
           'chatScreen': (context) => const ChatScreen(),

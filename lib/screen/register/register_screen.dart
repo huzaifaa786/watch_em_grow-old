@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:watch_em_grow/screen/profile/profile_screen.dart';
+import 'package:watch_em_grow/static/bottom_bar.dart';
 import 'package:watch_em_grow/static/checkbox.dart';
 import 'package:watch_em_grow/static/input_field.dart';
 import 'package:watch_em_grow/static/input_field_pass.dart';
 import 'package:watch_em_grow/static/input_field_phone.dart';
 import 'package:watch_em_grow/static/large_button.dart';
 import 'package:watch_em_grow/static/notification_checkbox.dart';
-import 'package:watch_em_grow/static/top_bar.dart';
 import 'package:watch_em_grow/values/colors.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -146,7 +146,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ProfileScreen()),
+                              builder: (context) => const BottomBar()),
                         );
                       },
                     )),

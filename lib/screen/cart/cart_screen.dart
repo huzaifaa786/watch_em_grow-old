@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch_em_grow/screen/checkout/checkout_screen.dart';
 import 'package:watch_em_grow/static/large_button.dart';
 import 'package:watch_em_grow/static/shope_review_card.dart';
 import 'package:watch_em_grow/static/top_bar.dart';
@@ -103,7 +104,13 @@ class CartScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 20,),
-                      LargeButton(title: 'Continue', onPressed: (){})
+                      LargeButton(title: 'Continue', onPressed: (){
+                           Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CheckoutScreen()),
+                        );
+                      })
                     ],
                   ),
                 )),
